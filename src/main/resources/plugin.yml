@@ -1,0 +1,3 @@
+name: TestCircle
+version: ${project.version}
+main: me.blok.test.Test
