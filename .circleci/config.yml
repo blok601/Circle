@@ -22,5 +22,5 @@ jobs:
       - run: mvn clean install
       - run: ls
       - store_artifacts:
-          path: build/libs
+          path: target
           destination: artifacts
