@@ -20,6 +20,6 @@ jobs:
     steps:
       - checkout
       - run: mvn clean install
-      - store_artificats:
+      - store_artifacts:
           path: build/libs
           destination: artifacts
