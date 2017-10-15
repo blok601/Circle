@@ -4,7 +4,6 @@ jobs:
     docker:
       - image: circleci/openjdk:8-jdk
     working_directory: ~/blok
-
     steps:
       - checkout
       - run: mvn clean package
