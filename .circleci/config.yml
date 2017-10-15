@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - checkout
-      - run: mvn clean install
+      - run: mvn clean package
       - run: ls
       - store_artifacts:
           path: target
@@ -29,4 +29,4 @@ jobs:
           name: Deploy to servers
           command: |
             ssh -o BatchMode=yes -o StrictHostKeyChecking=no dhillon@158.69.121.66 "uptime"
-            scp ./target/test-1.0-SNAPSHOT.jar dhillon@158.69.121.66~/test
+            scp ./target/test-1.0-SNAPSHOT.jar dhillon@158.69.121.66:~/test/plugin.jar
